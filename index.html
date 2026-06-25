@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Ronda — Reality emprendedor pan-LATAM. Oportunidad de inversión pre-seed." />
+<meta name="robots" content="noindex, nofollow" />
+<title>Ronda · Pitch para inversores ángel</title>
+<style>
+  :root {
+    --navy: #0F2A4A;
+    --navy-deep: #081C32;
+    --blue: #2E5C8A;
+    --gold: #F2A93B;
+    --gold-dark: #D88B1F;
+    --cream: #F7F1E5;
+    --paper: #FBF8F1;
+    --ink: #1A1A1A;
+    --grey: #6B6B6B;
+    --grey-light: #BCBCBC;
+    --line: #E2DCD0;
+    --white: #FFFFFF;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.55;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+
+  /* ============== HERO ============== */
+  .hero {
+    min-height: 100vh;
+    background: radial-gradient(ellipse at top left, #173964 0%, var(--navy) 50%, var(--navy-deep) 100%);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(242,169,59,0.18), transparent 70%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    bottom: -150px;
+    left: -150px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(46,92,138,0.35), transparent 70%);
+    pointer-events: none;
+  }
+  .hero-inner { position: relative; z-index: 2; width: 100%; }
+  .hero-tag {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: rgba(242,169,59,0.1);
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(242,169,59,0.3);
+    margin-bottom: 32px;
+    font-weight: 600;
+  }
+  .hero h1 {
+    font-size: clamp(80px, 14vw, 200px);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 0.9;
+    margin-bottom: 24px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 60%, var(--gold) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero-diamonds { color: var(--gold); font-size: 28px; letter-spacing: 16px; margin-bottom: 32px; }
+  .hero h2 {
+    font-size: clamp(24px, 3.5vw, 42px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    max-width: 800px;
+  }
+  .hero h2 em { color: var(--gold); font-style: normal; }
+  .hero p.lead {
+    font-size: clamp(17px, 2vw, 22px);
+    color: rgba(255,255,255,0.75);
+    max-width: 640px;
+    margin-bottom: 48px;
+  }
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--gold);
+    color: var(--navy-deep);
+    padding: 18px 32px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 17px;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    box-shadow: 0 8px 32px rgba(242,169,59,0.4);
+  }
+  .hero-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(242,169,59,0.6);
+    background: #FFB948;
+  }
+  .hero-cta .arrow { font-size: 18px; transition: transform 0.2s; }
+  .hero-cta:hover .arrow { transform: translateX(4px); }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.4);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+  .scroll-hint::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 32px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
+    margin: 12px auto 0;
+  }
+
+  /* ============== SECTIONS ============== */
+  section.band { padding: 120px 0; }
+  section.band.dark { background: var(--navy); color: var(--white); }
+  section.band.light { background: var(--paper); color: var(--ink); }
+  section.band.cream { background: var(--cream); color: var(--ink); }
+  section.band.deep { background: var(--navy-deep); color: var(--white); }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+  section.dark .eyebrow, section.deep .eyebrow { color: var(--gold); }
+
+  h2.section-title {
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin-bottom: 32px;
+    max-width: 900px;
+  }
+  h2.section-title em { color: var(--gold-dark); font-style: normal; }
+  section.dark h2.section-title em, section.deep h2.section-title em { color: var(--gold); }
+
+  .section-lead {
+    font-size: clamp(18px, 2vw, 22px);
+    color: var(--grey);
+    max-width: 720px;
+    line-height: 1.55;
+    margin-bottom: 64px;
+  }
+  section.dark .section-lead, section.deep .section-lead { color: rgba(255,255,255,0.7); }
+
+  /* ============== STATS GRID ============== */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .stat-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 40px 28px;
+    text-align: left;
+    transition: transform 0.3s, border-color 0.3s, background 0.3s;
+  }
+  section.light .stat-card, section.cream .stat-card {
+    background: var(--white);
+    border-color: var(--line);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+  }
+  .stat-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold);
+    background: rgba(242,169,59,0.04);
+  }
+  .stat-num {
+    font-size: clamp(48px, 6vw, 76px);
+    font-weight: 900;
+    color: var(--gold);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+  section.light .stat-num, section.cream .stat-num { color: var(--navy); }
+  .stat-label {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgba(255,255,255,0.6);
+  }
+  section.light .stat-label, section.cream .stat-label { color: var(--grey); }
+  .stat-sub {
+    margin-top: 12px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.5;
+  }
+  section.light .stat-sub, section.cream .stat-sub { color: var(--grey); }
+
+  /* ============== BRACKET FLOW ============== */
+  .bracket {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 48px;
+    overflow-x: auto;
+    padding: 16px 0 32px;
+  }
+  .bracket-step {
+    flex: 1;
+    min-width: 140px;
+    background: var(--white);
+    border: 2px solid var(--line);
+    border-radius: 16px;
+    padding: 32px 16px;
+    text-align: center;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .bracket-step.highlight {
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    border-color: var(--gold-dark);
+    color: var(--navy);
+    box-shadow: 0 12px 30px rgba(242,169,59,0.3);
+  }
+  .bracket-step:hover { transform: translateY(-4px); border-color: var(--gold); }
+  .bracket-step .step-num {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--navy);
+    letter-spacing: -0.02em;
+  }
+  .bracket-step.highlight .step-num { color: var(--navy-deep); }
+  .bracket-step .step-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--grey);
+    margin-top: 8px;
+  }
+  .bracket-step.highlight .step-label { color: var(--navy-deep); }
+  .bracket-arrow { font-size: 24px; color: var(--gold-dark); font-weight: 900; flex-shrink: 0; }
+
+  /* ============== PRENDAS GRID ============== */
+  .prendas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .prenda-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 36px 32px;
+    border: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .prenda-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 60px rgba(15,42,74,0.12);
+  }
+  .prenda-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+  }
+  .prenda-num {
+    font-size: 56px;
+    font-weight: 900;
+    color: var(--cream);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+  .prenda-name {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-bottom: 12px;
+  }
+  .prenda-desc { font-size: 15px; color: var(--grey); line-height: 1.55; }
+  .prenda-tag {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--gold-dark);
+    background: rgba(242,169,59,0.12);
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+
+  /* ============== STREAMS ============== */
+  .streams {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .stream {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 24px;
+    padding: 48px 32px;
+    transition: transform 0.3s, background 0.3s;
+  }
+  .stream:hover {
+    transform: translateY(-6px);
+    background: rgba(242,169,59,0.06);
+    border-color: var(--gold);
+  }
+  .stream-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 24px;
+  }
+  .stream h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+  .stream p {
+    color: rgba(255,255,255,0.7);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .stream .stream-value {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  /* ============== WHY NOW ============== */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .why-list { list-style: none; }
+  .why-list li {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+  }
+  .why-list li:last-child { border-bottom: none; }
+  .why-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: var(--cream);
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+  section.dark .why-icon, section.deep .why-icon {
+    background: rgba(242,169,59,0.15);
+    color: var(--gold);
+  }
+  .why-text strong {
+    display: block;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 6px;
+  }
+  .why-text p {
+    color: var(--grey);
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  section.dark .why-text p, section.deep .why-text p { color: rgba(255,255,255,0.7); }
+
+  /* ============== TEAM ============== */
+  .team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 48px;
+  }
+  .team-card {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 48px;
+    border: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+  }
+  .team-card::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(242,169,59,0.2), rgba(242,169,59,0.05));
+  }
+  .team-alias {
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    font-weight: 700;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .team-name {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--navy);
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .team-role {
+    font-size: 16px;
+    color: var(--blue);
+    font-weight: 600;
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .team-bio {
+    color: var(--grey);
+    line-height: 1.65;
+    font-size: 15px;
+    position: relative;
+  }
+
+  /* ============== USE OF FUNDS ============== */
+  .funds-table {
+    margin-top: 48px;
+    background: var(--white);
+    border-radius: 24px;
+    padding: 8px;
+    border: 1px solid var(--line);
+    overflow: hidden;
+  }
+  .fund-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 28px 32px;
+    border-bottom: 1px solid var(--line);
+    gap: 32px;
+  }
+  .fund-row:last-child { border-bottom: none; }
+  .fund-row.total {
+    background: linear-gradient(90deg, var(--navy), var(--navy-deep));
+    color: var(--white);
+    border-radius: 16px;
+    margin-top: 8px;
+  }
+  .fund-row.total .fund-label { color: var(--white); font-size: 20px; }
+  .fund-row.total .fund-amount { color: var(--gold); font-size: 32px; }
+  .fund-label { font-weight: 700; color: var(--navy); font-size: 17px; }
+  .fund-desc { color: var(--grey); font-size: 14px; margin-top: 4px; font-weight: 400; }
+  .fund-amount {
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--navy);
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+  }
+
+  /* ============== TIMELINE ============== */
+  .timeline {
+    margin-top: 48px;
+    position: relative;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 24px;
+    top: 12px;
+    bottom: 12px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--gold), rgba(242,169,59,0.1));
+  }
+  .timeline-row {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 24px;
+    align-items: flex-start;
+    padding: 20px 0;
+  }
+  .timeline-dot {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 3px solid var(--gold);
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+  }
+  .timeline-dot.done { background: var(--gold); }
+  .timeline-content {
+    padding-top: 8px;
+  }
+  .timeline-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  section.dark .timeline-title, section.deep .timeline-title { color: var(--white); }
+  .timeline-desc {
+    color: var(--grey);
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  section.dark .timeline-desc, section.deep .timeline-desc { color: rgba(255,255,255,0.7); }
+
+  /* ============== ASK BLOCK ============== */
+  .ask-hero {
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    border-radius: 32px;
+    padding: 80px 64px;
+    color: var(--navy-deep);
+    margin-top: 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .ask-hero::before {
+    content: "★";
+    position: absolute;
+    top: -40px;
+    right: -20px;
+    font-size: 280px;
+    color: rgba(255,255,255,0.15);
+    line-height: 1;
+  }
+  .ask-eyebrow {
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .ask-amount {
+    font-size: clamp(56px, 9vw, 96px);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .ask-terms {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    max-width: 640px;
+    position: relative;
+  }
+
+  /* ============== CTA FOOTER ============== */
+  .footer-cta {
+    text-align: center;
+    padding: 120px 0;
+    background: linear-gradient(180deg, var(--navy-deep), #050E1A);
+    color: var(--white);
+  }
+  .footer-cta h2 {
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+    line-height: 1;
+  }
+  .footer-cta h2 em { color: var(--gold); font-style: normal; }
+  .footer-cta p {
+    color: rgba(255,255,255,0.7);
+    font-size: 20px;
+    margin-bottom: 48px;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer-contacts {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+  }
+  .contact-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 28px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 999px;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  }
+  .contact-pill:hover {
+    background: rgba(242,169,59,0.1);
+    border-color: var(--gold);
+    transform: translateY(-2px);
+  }
+  .contact-pill .who {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-right: 8px;
+  }
+  .footer-meta {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.4);
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+
+  /* ============== ANIMATIONS ============== */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ============== RESPONSIVE ============== */
+  @media (max-width: 900px) {
+    .stats-grid, .prendas-grid, .streams, .team-grid { grid-template-columns: 1fr 1fr; }
+    .two-col { grid-template-columns: 1fr; gap: 48px; }
+    .bracket { flex-wrap: wrap; }
+    section.band { padding: 80px 0; }
+    .ask-hero { padding: 48px 32px; }
+  }
+  @media (max-width: 600px) {
+    .wrap { padding: 0 20px; }
+    .stats-grid, .prendas-grid, .streams, .team-grid { grid-template-columns: 1fr; }
+    .footer-contacts { flex-direction: column; align-items: center; }
+    .fund-row { grid-template-columns: 1fr; gap: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================== HERO ================== -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <span class="hero-tag">Pitch confidencial · Pre-seed · Junio 2026</span>
+    <h1>RONDA</h1>
+    <div class="hero-diamonds">◆ ◆ ◆ ◆</div>
+    <h2>Emprender en LATAM es otro deporte. <em>Ronda es su reality.</em></h2>
+    <p class="lead">Ocho equipos compiten en prendas que nacen de la realidad latina: el rebusque, la devaluación, el fiado, el quilombo. Eliminación directa, pre-grabado en bloque de 6 semanas, diseñado desde el día uno para licenciarse en 7 mercados.</p>
+    <a href="#oportunidad" class="hero-cta">
+      Ver la oportunidad
+      <span class="arrow">→</span>
+    </a>
+  </div>
+  <div class="scroll-hint">scroll</div>
+</section>
+
+<!-- ================== HOOK / NUMBERS ================== -->
+<section class="band light" id="oportunidad">
+  <div class="wrap">
+    <span class="eyebrow">La oportunidad</span>
+    <h2 class="section-title"><em>120 millones</em> de hispanos emprenden en una cancha que ningún formato importado entiende.</h2>
+    <p class="section-lead">Shark Tank y The Apprentice son juegos de una cancha que en LATAM no existe: moneda estable, mercado formal, plata abundante, reglas claras. Acá se emprende con el dólar moviéndose, la DGI encima y rebuscándosela con poco. Ronda es el primer formato que compite en la cancha real — y por eso no se parece a ninguno. Diseñado para licenciarse, no para depender de talents específicos.</p>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num">120M+</div>
+        <div class="stat-label">Audiencia hispana</div>
+        <div class="stat-sub">LATAM (~80M) + USA hispano (~30M) + España + diáspora</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">7</div>
+        <div class="stat-label">Mercados objetivo</div>
+        <div class="stat-sub">AR, MX, ES, CO, CL, PE, USA hispano</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">$375K</div>
+        <div class="stat-label">Licencias proyectadas</div>
+        <div class="stat-sub">5 mercados × USD 75K + royalties recurrentes 3–7%</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">24m</div>
+        <div class="stat-label">Al primer LOI internacional</div>
+        <div class="stat-sub">Pipeline de format sales activado post temporada 1</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================== FORMATO / BRACKET ================== -->
+<section class="band cream">
+  <div class="wrap">
+    <span class="eyebrow">El formato</span>
+    <h2 class="section-title">Reality competition eliminatoria. <em>Diez episodios.</em> Una final en vivo.</h2>
+    <p class="section-lead">Ocho equipos pre-seed entran al cuadro. Cada episodio enfrenta dos equipos en cuatro prendas que miden habilidades emprendedoras reales: ventas, negociación, manejo de crisis, pivote bajo presión.</p>
+
+    <div class="bracket">
+      <div class="bracket-step">
+        <div class="step-num">8</div>
+        <div class="step-label">Equipos</div>
+      </div>
+      <div class="bracket-arrow">▶</div>
+      <div class="bracket-step">
+        <div class="step-num">4</div>
+        <div class="step-label">Cuartos</div>
+      </div>
+      <div class="bracket-arrow">▶</div>
+      <div class="bracket-step">
+        <div class="step-num">2</div>
+        <div class="step-label">Semis</div>
+      </div>
+      <div class="bracket-arrow">▶</div>
+      <div class="bracket-step highlight">
+        <div class="step-num">1</div>
+        <div class="step-label">Final live</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================== PRENDAS ================== -->
+<section class="band light">
+  <div class="wrap">
+    <span class="eyebrow">Las prendas</span>
+    <h2 class="section-title">No son juegos de oficina. Son las pruebas que <em>la calle latina</em> te toma de verdad.</h2>
+    <p class="section-lead">Doce prendas en el format bible, todas nacidas de cómo se emprende acá: con el dólar moviéndose, fiando, rebuscándosela con poco. Cada una mide un skill universal a través de una situación 100% LATAM — y cada una trae su sponsor categoría natural.</p>
+
+    <div class="prendas-grid">
+      <div class="prenda-card">
+        <div class="prenda-num">01</div>
+        <div class="prenda-name">El Rebusque</div>
+        <p class="prenda-desc">USD 200 de mercadería o un puñado de pesos. Una feria, un domingo. Sin reglas de canal ni precio. Gana quien se la rebusca con mejor revenue y margen.</p>
+        <span class="prenda-tag">Ventas · Hustle</span>
+      </div>
+      <div class="prenda-card">
+        <div class="prenda-num">02</div>
+        <div class="prenda-name">Devaluación</div>
+        <p class="prenda-desc">A mitad de la prueba el dólar pega un salto. Tus costos eran en USD, tu precio en moneda local. Horas para reprecificar y salvar el margen.</p>
+        <span class="prenda-tag">Pricing · Margen</span>
+      </div>
+      <div class="prenda-card">
+        <div class="prenda-num">03</div>
+        <div class="prenda-name">Fiado</div>
+        <p class="prenda-desc">Un barrio sin crédito formal. Construí clientela vendiendo a fiado — y al cierre, andá a cobrar. Lo que no cobrás, lo perdés.</p>
+        <span class="prenda-tag">Confianza · Cobranza</span>
+      </div>
+      <div class="prenda-card">
+        <div class="prenda-num">04</div>
+        <div class="prenda-name">El Conocido</div>
+        <p class="prenda-desc">Necesitás un insumo casi imposible y no tenés un peso. Solo tu red: «tengo un conocido que...». Quien arma la cadena de favores, gana.</p>
+        <span class="prenda-tag">Red · Recursividad</span>
+      </div>
+      <div class="prenda-card">
+        <div class="prenda-num">05</div>
+        <div class="prenda-name">Puerta a Puerta</div>
+        <p class="prenda-desc">Meté tu producto en la mayor cantidad de almacenes y kioscos de barrio en un día. El canal que de verdad mueve LATAM, un mostrador a la vez.</p>
+        <span class="prenda-tag">Distribución · B2B</span>
+      </div>
+      <div class="prenda-card">
+        <div class="prenda-num">06</div>
+        <div class="prenda-name">Quilombo</div>
+        <p class="prenda-desc">A mitad de la operación se cae todo: corte de luz, un paro, un piquete que bloquea la logística. Entregá igual. La crisis no se simula — pasa.</p>
+        <span class="prenda-tag">Resiliencia · Crisis</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================== TRES STREAMS ================== -->
+<section class="band dark">
+  <div class="wrap">
+    <span class="eyebrow">El modelo de negocio</span>
+    <h2 class="section-title">Tres streams. Cero capital propio comprometido en producción.</h2>
+    <p class="section-lead">La producción se financia con sponsors antes de que se gaste un peso. El upside angel viene del stream secundario y, sobre todo, del endgame: la venta del formato internacional.</p>
+
+    <div class="streams">
+      <div class="stream">
+        <div class="stream-icon">1</div>
+        <h3>Media</h3>
+        <p>Sponsors fundacionales + ad revenue + channel deals. Cada prenda tiene un sponsor categoría natural integrado editorialmente, no banner.</p>
+        <div class="stream-value">Principal Fase 1–2 · USD 250K+ por temporada</div>
+      </div>
+      <div class="stream">
+        <div class="stream-icon">2</div>
+        <h3>Format Sales</h3>
+        <p>Licencia del formato a productoras y canales en 7 mercados. Modelo Banijay / Endemol. Sin dependencia de talents específicos = más vendible.</p>
+        <div class="stream-value">Endgame · USD 375K+ proyectado en licencias iniciales + royalties</div>
+      </div>
+      <div class="stream">
+        <div class="stream-icon">3</div>
+        <h3>Deal Flow Privado</h3>
+        <p>Los founders se reservan el derecho de invertir directamente en emprendimientos del show — en privado, separado del show, sin promesas en cámara.</p>
+        <div class="stream-value">Upside privado · No diluye al angel investor del show</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================== WHY NOW / WHY US ================== -->
+<section class="band light">
+  <div class="wrap">
+    <div class="two-col">
+      <div>
+        <span class="eyebrow">Por qué ahora</span>
+        <h2 class="section-title">Timing en tres dimensiones.</h2>
+        <ul class="why-list">
+          <li>
+            <div class="why-icon">◆</div>
+            <div class="why-text">
+              <strong>Ecosistema maduro, sin producto de medios</strong>
+              <p>LATAM tiene infraestructura (Endeavor, ANII, 500 LATAM, Wayra) y casos de exit (dLocal, Kavak, Rappi). Pero no hay reality format que lo capitalice.</p>
+            </div>
+          </li>
+          <li>
+            <div class="why-icon">◆</div>
+            <div class="why-text">
+              <strong>Audiencias hambrientas de business content</strong>
+              <p>YouTube en español creció 40% en business/finanzas en dos años. Podcasts emprendedores explotaron. Falta el reality.</p>
+            </div>
+          </li>
+          <li>
+            <div class="why-icon">◆</div>
+            <div class="why-text">
+              <strong>Format sales en su mejor momento</strong>
+              <p>Banijay, Fremantle, Endemol están comprando formatos LATAM como nunca antes. La diáspora hispana en USA empuja la demanda global.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <span class="eyebrow">Por qué nosotros</span>
+        <h2 class="section-title">Detrás de cámara, deliberadamente.</h2>
+        <ul class="why-list">
+          <li>
+            <div class="why-icon">★</div>
+            <div class="why-text">
+              <strong>El Turco</strong>
+              <p>Arquitecto uruguayo, desarrollador inmobiliario en el área de Nueva York. Red corporate USA y capital privado. Lidera sponsor sales y deal flow.</p>
+            </div>
+          </li>
+          <li>
+            <div class="why-icon">★</div>
+            <div class="why-text">
+              <strong>El Chino</strong>
+              <p>Economista uruguayo, arquitecto de soluciones IT con experiencia en ~40 países. Puente entre tecnología y negocios.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================== ROADMAP ================== -->
+<section class="band cream">
+  <div class="wrap">
+    <span class="eyebrow">Roadmap 24 meses</span>
+    <h2 class="section-title">Capital eficiente. <em>Gates explícitos.</em> Stop-loss claro.</h2>
+    <p class="section-lead">Cada fase tiene un gate de validación. Si no se cumplen las métricas, no avanzamos. El angel no se queda atrapado financiando algo que no funciona.</p>
+
+    <div class="timeline">
+      <div class="timeline-row">
+        <div class="timeline-dot done">F0</div>
+        <div class="timeline-content">
+          <div class="timeline-title">Mes 1–3 · Validación · USD 0–500 propio</div>
+          <div class="timeline-desc">Format bible v1, clearance legal IP, showrunner advisor, 5 sponsors precualificados, 15 emprendimientos en pipeline. Gate: bible validado, showrunner contratado.</div>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-dot">F1</div>
+        <div class="timeline-content">
+          <div class="timeline-title">Mes 4–7 · Piloto · USD 70K</div>
+          <div class="timeline-desc">Un episodio piloto completo con presentador, jurados y prendas. SRL + HoldCo Delaware constituidas. Gate: 150K+ views, sponsor anchor firmado, decisión vamos / paramos.</div>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-dot">F2</div>
+        <div class="timeline-content">
+          <div class="timeline-title">Mes 8–16 · Temporada 1 · USD 420K</div>
+          <div class="timeline-desc">Diez episodios + final en vivo. Filmación en bloque concentrado de 6 semanas. Lanzamiento YouTube + channel deal. Gate: métricas demostrables, dossier internacional listo.</div>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-dot">F3</div>
+        <div class="timeline-content">
+          <div class="timeline-title">Mes 17–24 · Format Sales · USD 70K</div>
+          <div class="timeline-desc">MIPCOM Cannes (Oct), NATPE Miami (Ene). Sales agent contratado. Pitches a productoras internacionales. Gate: primer LOI o licencia cerrada.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================== USE OF FUNDS ================== -->
+<section class="band light">
+  <div class="wrap">
+    <span class="eyebrow">Uso de fondos del ticket angel</span>
+    <h2 class="section-title">Cada dólar tiene destino antes de entrar.</h2>
+    <p class="section-lead">El angel cierra el gap entre lo que sponsors y coproductor cubren y el costo real del piloto + estructura. Esto compra runway hasta cerrar el sponsor anchor de Temporada 1.</p>
+
+    <div class="funds-table">
+      <div class="fund-row">
+        <div>
+          <div class="fund-label">Piloto · gap de producción</div>
+          <div class="fund-desc">Lo que sponsors y coproductor no cubren del episodio piloto</div>
+        </div>
+        <div class="fund-amount">USD 40,000</div>
+      </div>
+      <div class="fund-row">
+        <div>
+          <div class="fund-label">Estructura legal e IP</div>
+          <div class="fund-desc">HoldCo Delaware + SRL Uruguay + FRAPA + TM en 7 países + format bible internacional</div>
+        </div>
+        <div class="fund-amount">USD 25,000</div>
+      </div>
+      <div class="fund-row">
+        <div>
+          <div class="fund-label">Showrunner · primer trimestre</div>
+          <div class="fund-desc">Salario senior local hasta cerrar sponsor anchor</div>
+        </div>
+        <div class="fund-amount">USD 20,000</div>
+      </div>
+      <div class="fund-row">
+        <div>
+          <div class="fund-label">Working capital · contingencia</div>
+          <div class="fund-desc">Buffer para imprevistos hasta gate Fase 1 → 2</div>
+        </div>
+        <div class="fund-amount">USD 15,000</div>
+      </div>
+      <div class="fund-row total">
+        <div class="fund-label">Total ronda pre-seed</div>
+        <div class="fund-amount">USD 100,000</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================== ASK ================== -->
+<section class="band deep">
+  <div class="wrap">
+    <span class="eyebrow">El ticket</span>
+    <h2 class="section-title">SAFE pre-seed. Cap negociable. <em>Tickets desde USD 25K.</em></h2>
+
+    <div class="ask-hero">
+      <div class="ask-eyebrow">Estamos abriendo</div>
+      <div class="ask-amount">USD 100K</div>
+      <p class="ask-terms">SAFE con cap a discutir. Tickets entre USD 25K y USD 50K. Cerramos hasta cuatro angels. El ticket compra runway de 7 meses, exposición al format sale como endgame, y acceso al deal flow privado del Turco y el Chino sin diluir.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================== FOOTER CTA ================== -->
+<section class="footer-cta">
+  <div class="wrap">
+    <h2>¿<em>Conversamos</em>?</h2>
+    <p>Si esto te resuena, mandanos un mail. La primera conversación es siempre informal y sin compromiso — queremos entender qué buscás antes de tirarte números.</p>
+
+    <div class="footer-contacts">
+      <a href="mailto:hola@ronda.lat" class="contact-pill">
+        <span class="who">Email</span>
+        hola@ronda.lat
+      </a>
+      <a href="#" class="contact-pill">
+        <span class="who">Turco</span>
+        Diego · Manhattan
+      </a>
+      <a href="#" class="contact-pill">
+        <span class="who">Chino</span>
+        Yaakov · Tel Aviv
+      </a>
+    </div>
+
+    <div class="footer-meta">
+      Ronda · Confidencial · Junio 2026 · v2.1 · Documento de pitch para inversores ángel
+    </div>
+  </div>
+</section>
+
+<script>
+  // Fade in on scroll - vanilla, sin dependencias
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -80px 0px' });
+
+  document.querySelectorAll('section.band > .wrap > *, .stat-card, .prenda-card, .stream, .team-card, .bracket-step, .timeline-row').forEach(el => {
+    el.classList.add('fade-in');
+    io.observe(el);
+  });
+</script>
+
+</body>
+</html>
