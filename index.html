@@ -737,6 +737,14 @@
   .rdot.on { background: var(--gold); }
   .rcount { font-size: 14px; color: var(--grey); min-width: 50px; text-align: center; font-weight: 600; }
   @media (max-width: 600px) { .rcap { max-width: 80%; font-size: 13px; } .rbtn { width: 40px; height: 40px; } }
+
+  /* ============== BOTÓN DESCARGA DOCUMENTOS ============== */
+  .doc-btn { display:inline-flex; align-items:center; gap:14px; background:var(--navy); color:#fff;
+    padding:18px 30px; border-radius:999px; text-decoration:none; font-weight:700; font-size:17px;
+    transition:transform .2s, box-shadow .2s, background .2s; box-shadow:0 10px 30px rgba(15,42,74,.18); }
+  .doc-btn:hover { transform:translateY(-2px); background:var(--navy-deep); box-shadow:0 14px 40px rgba(15,42,74,.28); }
+  .doc-btn svg { color:var(--gold); flex-shrink:0; }
+  .doc-btn small { display:block; font-size:12px; font-weight:600; color:rgba(255,255,255,.6); letter-spacing:.5px; margin-top:2px; }
 </style>
 </head>
 <body>
@@ -894,6 +902,12 @@
         <p class="prenda-desc">A mitad de la operación se cae todo: corte de luz, un paro, un piquete que bloquea la logística. Entregá igual. La crisis no se simula — pasa.</p>
         <span class="prenda-tag">Resiliencia · Crisis</span>
       </div>
+    </div>
+    <div style="text-align:center; margin-top:56px;">
+      <a href="prendas.pdf" class="doc-btn" download>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M5 20h14v-2H5v2zM12 16l5-5h-3V4h-4v7H7l5 5z"/></svg>
+        <span>Descargar el detalle de prendas <small>PDF · las 12 prendas del format bible</small></span>
+      </a>
     </div>
   </div>
 </section>
